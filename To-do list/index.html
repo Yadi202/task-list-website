@@ -24,19 +24,36 @@ function drop(ev) {
 </script>
 </head>
 <body>
+<input id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></input>
+<br>
+<BR>
+<input></input>
+<br>
 
-<p>To-Do-List</p>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-<input id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></div>
-
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<label>Done</label>
+            <input type = "checkbox"
+                id = "checkbox"
+                value = "checkbox" />
+            <label for = "checkbox"></label>
 
 <br>
-<p>Doing</p>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
+<input></input>
 <br>
-<p>Done</p>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
+<label>Done</label>
+            <input type = "checkbox"
+                id = "checkbox"
+                value = "checkbox" />
+            <label for = "checkbox"></label>
+<br>
+<input></input>
+<br>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<label>Done</label>
+            <input type = "checkbox"
+                id = "checkbox"
+                value = "checkbox" />
+            <label for = "checkbox"></label>
 </body>
 </html>
