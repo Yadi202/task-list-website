@@ -10,56 +10,42 @@
 }
 </style>
 <script>
+var listItems = 0;
 function allowDrop(ev) {
   ev.preventDefault();
 }
+
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
+
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
-}
-function addtodiv(){
-  document.getElementById('div1').innerHTML += "<input id='drag" + listItems + "' src='img_logo.gif' draggable='true' ondragstart='drag(event)'' width='336' height='69'>"
-        listItems++;
-}
+  }
+  function addToDiv() {
+      listItems ++;
+        document.getElementById('div1').innerHTML += "<input id='drag" + listItems +" src='img_logo.gif' draggable='true' ondragstart='drag(event)' width='336' height='69'>"
+      }
 </script>
 </head>
 <body>
-<button onclick = "addtodiv()">add new task</button>
-<br>
-<BR>
-<input></input>
-<br>
-<!-- derp -->
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<!-- <input id="drag0" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"> -->
-</div>
-<label>Done</label>
-            <input type = "checkbox"
-                id = "checkbox"
-                value = "checkbox" />
-            <label for = "checkbox"></label>
+<button onclick="addToDiv()">Add New task</button>
+
+<p>To-Do-List</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+<input id="drag0" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></div>
+
+
 
 <br>
-<input></input>
-<br>
+<p>Doing</p>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<label>Done</label>
-            <input type = "checkbox"
-                id = "checkbox"
-                value = "checkbox" />
-            <label for = "checkbox"></label>
-<br>
-<input></input>
-<br>
+
+<p>Done</p>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<label>Done</label>
-            <input type = "checkbox"
-                id = "checkbox"
-                value = "checkbox" />
-            <label for = "checkbox"></label>
+
+
 </body>
 </html>
