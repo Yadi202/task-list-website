@@ -21,16 +21,21 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 }
+function addtodiv(){
+  document.getElementById('div1').innerHTML += "<input id='drag" + listItems + "' src='img_logo.gif' draggable='true' ondragstart='drag(event)'' width='336' height='69'>"
+        listItems++;
+}
 </script>
 </head>
 <body>
-<input id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></input>
+<button onclick = "addtodiv()">add new task</button>
 <br>
 <BR>
 <input></input>
 <br>
 
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<input id="drag0" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></div>
 <label>Done</label>
             <input type = "checkbox"
                 id = "checkbox"
