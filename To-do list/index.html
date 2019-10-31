@@ -10,6 +10,7 @@
 }
 </style>
 <script>
+var listItems = 1;
 function allowDrop(ev) {
   ev.preventDefault();
 }
@@ -20,40 +21,20 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
-}
+  }
+  function addToDiv() {
+        document.getElementById('div1').innerHTML += "<input id='drag" + listItems + "' src='img_logo.gif' draggable='true' ondragstart='drag(event)'' width='336' height='69'>"
+        listItems++;
+      }
 </script>
 </head>
 <body>
-<input id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></input>
-<br>
-<BR>
-<input></input>
-<br>
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<label>Done</label>
-            <input type = "checkbox"
-                id = "checkbox"
-                value = "checkbox" />
-            <label for = "checkbox"></label>
 
 <br>
 <input></input>
 <br>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<label>Done</label>
-            <input type = "checkbox"
-                id = "checkbox"
-                value = "checkbox" />
-            <label for = "checkbox"></label>
-<br>
-<input></input>
-<br>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<label>Done</label>
-            <input type = "checkbox"
-                id = "checkbox"
-                value = "checkbox" />
-            <label for = "checkbox"></label>
+
 </body>
 </html>
