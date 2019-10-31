@@ -14,11 +14,9 @@ var listItems = 1;
 function allowDrop(ev) {
   ev.preventDefault();
 }
-
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
-
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
@@ -31,21 +29,12 @@ function drop(ev) {
 </script>
 </head>
 <body>
-<button onclick="addToDiv()">Add New task</button>
-
-<p>To-Do-List</p>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-<input id="drag0" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></div>
-
 
 
 <br>
-<p>Doing</p>
+<input></input>
+<br>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-<p>Done</p>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
 
 </body>
 </html>
