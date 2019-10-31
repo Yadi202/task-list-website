@@ -22,18 +22,26 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
-}
+  }
+  function addToDiv() {
+        document.getElementById('div1').innerHTML += "<input id='drag1' src='img_logo.gif' draggable='true' ondragstart='drag(event)'' width='336' height='69'>"
+      }
 </script>
 </head>
 <body>
+<button onclick="addToDiv()">Add New task</button>
 
 <p>To-Do-List</p>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
 <input id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></div>
 
 
+
 <br>
 <p>Doing</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<p>Done</p>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 
