@@ -1,47 +1,47 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="style.css"
-<style>
+  <link rel="stylesheet" type="text/css" href="style.css" <style>
 
-</style>
-<script>
-var listItems = 0;
-function allowDrop(ev) {
-  ev.preventDefault();
-}
+  </style>
+  <script>
+    var listItems = 0;
 
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
 
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-  }
-  function addToDiv() {
-      listItems ++;
-        document.getElementById('div1').innerHTML += "<input id='drag" + listItems +" src='img_logo.gif' draggable='true' ondragstart='drag(event)' width='336' height='69'>"
-      }
-</script>
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+
+    function addToDiv() {
+      listItems++;
+      document.getElementById('div1').innerHTML += "<input id='drag" + listItems + " src='img_logo.gif' draggable='true' ondragstart='drag(event)' width='336' height='69'>"
+    }
+  </script>
 </head>
+
 <body>
-<button onclick="addToDiv()">Add New task</button>
-
-<p>To-Do-List</p>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-<input id="drag0" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></div>
-
-
-
+  <button onclick="addToDiv()">Add New task</button>
 <br>
-<p>Doing</p>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <input type="text"></input>
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-<p>Done</p>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <input type="text"></input>
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<input type="text" name="" value="">
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 
 </body>
+
 </html>
