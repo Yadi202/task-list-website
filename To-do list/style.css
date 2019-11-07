@@ -3,15 +3,16 @@ body {
   background-image: url("cereal.gif");
   background-repeat:no-repeat;
   background-size: 1550px 800px
-
-
 }
-
+#div1,#div2,#div3{
+    padding: 10px 30px;
+    border: 10px solid #ff2;
+}
 .container{
   text-align: center;
   margin-top: 360px;
 }
-.btn{
+ .btn1{
   border: 1px solid #ff8080;
   background: none;
   padding: 10px 20px;
@@ -51,4 +52,7 @@ body {
 
 .btn1:hover::before{
   height: 180%
+}
+#box1,#box2,#box3{
+  color: #ff2
 }
