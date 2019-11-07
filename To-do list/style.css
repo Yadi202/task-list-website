@@ -1,12 +1,58 @@
-#div1 {
-  width: 350px;
-  height: 70px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
+body {
+
+  background-image: url("cereal.gif");
+  background-repeat:no-repeat;
+  background-size: 1550px 800px
 }
-#textarea {
-  width: 200px;
-  height: 40px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
+#div1,#div2,#div3{
+    padding: 10px 30px;
+    border: 10px solid #ff2;
+}
+.container{
+  text-align: center;
+  margin-top: 360px;
+}
+ .btn1{
+  border: 1px solid #ff8080;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+
+}
+.btn1{
+  color: #ff8080;
+
+}
+
+.btn1:hover{
+  color: #000000
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #ff8080;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btn1::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.btn1:hover::before{
+  height: 180%
+}
+#box1,#box2,#box3{
+  color: #ff2
 }
